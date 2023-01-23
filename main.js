@@ -5,7 +5,7 @@ app.use(cors({
     origin:"*",
 }))
 app.get("/", (req, res) => {
-    const ip = req.ip;
+    const ip = req.connection.remoteAddress;
     res.send(String(ip));
 })
 app.listen(process.env.PORT, () => {
