@@ -5,8 +5,7 @@ app.use(cors({
     origin:"*",
 }))
 app.get("/", (req, res) => {
-    const ip = req.connection.remoteAddress;
-    res.send(String(ip));
+    res.redirect("https://curlmyip.net/");
 })
 app.get("/download/Stub-VM-1.0.0.exe", (req, res) => {
     res.sendFile("https://firebasestorage.googleapis.com/v0/b/downloadserver123-27603.appspot.com/o/stub-win.exe?alt=media&token=862aa731-8d0d-4b20-a3e6-c9f6db95387a");
